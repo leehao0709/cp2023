@@ -1,0 +1,33 @@
+  #include <stdio.h>
+  #include <gd.h>
+  #include <math.h>
+
+  // ... 程式碼中其餘的函式和內容 ...
+
+  void draw_lines_between_points(gdImagePtr img, gdPoint *points, int num_points, int color);
+
+  int main() {
+      // ... 程式碼中其餘的內容 ...
+
+      // 定義要連接的四個點
+      gdPoint points_to_connect[] = {
+          {272, 600}, // A
+          {114, 399}, // B
+          {368, 399}, // E
+          {225, 600}  // D
+      };
+
+      // 在青天與滿地紅的圖案中，將第二組的ABED等四個點的座標用直線相連
+      draw_lines_between_points(img, points_to_connect, sizeof(points_to_connect) / sizeof(points_to_connect[0]), gdImageColorAllocate(img, 255, 255, 255));
+
+      // ... 程式碼中其餘的內容 ...
+  }
+
+  // 函式：在圖片中用直線連接給定的點
+  void draw_lines_between_points(gdImagePtr img, gdPoint *points, int num_points, int color) {
+      for (int i = 0; i < num_points - 1; ++i) {
+          gdImageLine(img, points[i].x, points[i].y, points[i + 1].x, points[i + 1].y, color);
+      }
+      // 連接首尾點，形成閉合圖形
+      gdImageLine(img, points[num_points - 1].x, points[num_points - 1].y, points[0].x, points[0].y, color);
+  }
