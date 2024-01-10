@@ -1631,7 +1631,28 @@ int main()
 <p><span><img alt="" height="157" src="/images/q10.png" width="450"/><br/></span></p>
 <h2>EX_1</h2>
 <h3><span style="color: #ff9900;">課外練習1.</span></h3>
-<p></p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">/* ====================
+99 乘法.
+==================== */
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    int x, y;
+
+    for (x = 1; x &lt;= 9; x++)
+    {
+        for (y = 1; y &lt;= 9; y++)
+        {
+            printf("%2d ", x * y);  /* 使用 %2d 以確保數字的對齊性 */
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+</pre>
+<p><img alt="" height="235" src="/images/cp1.png" width="450"/><br/><br/></p>
 <h3><span style="color: #ff9900;">課外練習2.</span></h3>
 <p><span></span></p>
 <h3><span style="color: #ff9900;">課外練習3.</span></h3>
