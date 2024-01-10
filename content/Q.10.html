@@ -143,7 +143,27 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">Q.9 << <a href='Q.9.html'>Previous</a> <a href='EX_1.html'>Next</a> >> EX_1<br /><h1>Q.10</h1>
-<p><span></span></p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main()
+{
+    char ch;
+
+    printf("輸入一个字符：");
+
+    // 檢查 scanf 的返回值，確保成功讀取一個字符
+    if (scanf(" %c", &amp;ch) != 1) {
+        printf("讀取字符失敗\n");
+        return 1; //  或者採取其他錯誤處理措施
+    }
+
+    if (ch == 'a') {
+        printf("按下了 'a'\n");
+    }
+
+    return 0;
+}</pre>
+<p><span><img alt="" height="157" src="./../images/q10.png" width="450"/><br/></span></p>
 <br />Q.9 << <a href='Q.9.html'>Previous</a> <a href='EX_1.html'>Next</a> >> EX_1</div>
         
     <!-- footer -->
