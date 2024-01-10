@@ -1608,7 +1608,27 @@ return ( result );
 </pre>
 <p><span><img alt="" height="109" src="/images/q9.png" width="450"/><br/></span></p>
 <h3><span style="color: #ff9900;">Q.10</span></h3>
-<p><span></span></p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main()
+{
+    char ch;
+
+    printf("輸入一个字符：");
+
+    // 檢查 scanf 的返回值，確保成功讀取一個字符
+    if (scanf(" %c", &amp;ch) != 1) {
+        printf("讀取字符失敗\n");
+        return 1; //  或者採取其他錯誤處理措施
+    }
+
+    if (ch == 'a') {
+        printf("按下了 'a'\n");
+    }
+
+    return 0;
+}</pre>
+<p><span><img alt="" height="157" src="/images/q10.png" width="450"/><br/></span></p>
 <h2>EX_1</h2>
 <h3><span style="color: #ff9900;">課外練習1.</span></h3>
 <p></p>
