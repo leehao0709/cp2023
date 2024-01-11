@@ -1561,7 +1561,34 @@ int main()
 }</pre>
 <p><span><img alt="" height="145" src="/images/cp04.png" width="450"/><br/></span></p>
 <p><span>5.<span>用 C 語言寫一個程序，使用函數求任意數字的平方</span></span></p>
-<p><span><span></span></span></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+double square(double num) {
+    return (num * num);
+}
+
+int main() {
+    int num;
+    double n;
+    int scanfResult; // 變數用於儲存 scanf 的返回值
+
+    printf("\n\n 函式：計算任意數字的平方值 :\n");
+    printf("------------------------------------------------\n");
+
+    printf("輸入任意數字以計算平方值：");
+    scanfResult = scanf("%d", &amp;num); // 將 scanf 的返回值儲存在變數中
+
+    if (scanfResult != 1) {
+        printf("輸入錯誤或無效的數字。\n");
+        return 1; // 適當的錯誤處理
+    }
+
+    n = square(num);
+    printf("%d 的平方是：%.2f\n", num, n);
+
+    return 0;
+}</pre>
+<p><span><span><img alt="" height="185" src="/images/cp05.png" width="450"/><br/></span></span></p>
 <p><span><span>6.<span>用 C 語言寫一個程序，使用函數交換兩個數字</span></span></span></p>
 <p><span><span><span></span></span></span></p>
 <p><span><span><span>7.<span>使用函數檢查給定數字是偶數還是奇數</span></span></span></span></p>
