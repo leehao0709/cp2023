@@ -1933,7 +1933,27 @@ int main()
 }</pre>
 <p><span><span><span><span><span><span><span><img alt="" height="271" src="/images/cp27.png" width="450"/><br/></span></span></span></span></span></span></span></p>
 <p><span><span><span><span><span><span><span>8.<span>編寫一個 C 程序，將指定的日期轉換為年、週和日</span></span></span></span></span></span></span></span></p>
-<p><span><span><span><span><span><span><span><span></span></span></span></span></span></span></span></span></p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main()
+{
+    int days, years, weeks;
+
+    days = 1329; // Total number of days
+
+    // Converts days to years, weeks and days
+    years = days/365; // Calculate years
+    weeks = (days % 365)/7; // Calculate weeks
+    days = days - ((years*365) + (weeks*7)); // Calculate remaining days
+
+    // Print the results
+    printf("Years: %d\n", years);
+    printf("Weeks: %d\n", weeks);
+    printf("Days: %d \n", days);
+
+    return 0;
+}</pre>
+<p><span><span><span><span><span><span><span><span><img alt="" height="173" src="/images/cp28.png" width="450"/><br/></span></span></span></span></span></span></span></span></p>
 <p><span><span><span><span><span><span><span><span>9.<span>寫一個 C 程序，接受使用者提供的兩個整數併計算這兩個整數的和</span></span></span></span></span></span></span></span></span></p>
 <p><span><span><span><span><span><span><span><span><span></span></span></span></span></span></span></span></span></span></p>
 <p><span><span><span><span><span><span><span><span><span>10.<span>寫一個 C 程序，接受使用者提供的兩個整數併計算這兩個整數的乘積</span></span></span></span></span></span></span></span></span></span></p>
