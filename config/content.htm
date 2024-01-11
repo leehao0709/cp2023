@@ -1886,7 +1886,24 @@ int main() {
 }</pre>
 <p><span><span><span><span><span><img alt="" height="153" src="/images/cp25.png" width="450"/><br/></span></span></span></span></span></p>
 <p><span><span><span><span><span>6.<span>寫一個 C 程式來計算給定半徑的圓的周長和面積</span></span></span></span></span></span></p>
-<p><span><span><span><span><span><span></span></span></span></span></span></span></p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main() {
+   int radius;      /* Variable to store the radius of the circle */
+   float area, perimeter;    /* Variables to store the area and perimeter of the circle */
+   radius = 6;      /* Assigning a value to the radius */
+
+   /* Calculating the perimeter of the circle */
+   perimeter = 2 * 3.14 * radius;
+   printf("Perimeter of the Circle = %f inches\n", perimeter);
+
+   /* Calculating the area of the circle */
+   area = 3.14 * radius * radius;
+   printf("Area of the Circle = %f square inches\n", area);
+
+   return(0);
+}</pre>
+<p><span><span><span><span><span><span><img alt="" height="160" src="/images/cp26.png" width="450"/><br/></span></span></span></span></span></span></p>
 <p><span><span><span><span><span><span>7.<span>寫一個C 程式來顯示多個變數</span></span></span></span></span></span></span></p>
 <p><span><span><span><span><span><span><span></span></span></span></span></span></span></span></p>
 <p><span><span><span><span><span><span><span>8.<span>編寫一個 C 程序，將指定的日期轉換為年、週和日</span></span></span></span></span></span></span></span></p>
