@@ -1527,7 +1527,39 @@ int main()
 }</pre>
 <p><span><img alt="" height="203" src="/images/cp03.png" width="450"/></span></p>
 <p><span>4.</span><span>寫一個 C 程序，根據給定的總行駛距離（整數值）（以公里為單位）和用過的燃料（以公升為單位，浮點數 - 2 位小數）計算自行車的平均消耗量</span></p>
-<p><span></span></p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main() 
+{
+    int x;    // 用來儲存總行駛公里數
+    float y;  // 用來儲存總耗油量
+
+    // 提示用戶輸入總行駛公里數並存儲在 'x' 中
+    printf("Input total distance in km: ");
+    if (scanf("%d", &amp;x) != 1) { // 檢查 scanf 的返回值
+        printf("Error: Please enter a valid integer.\n");
+        return 1; // 返回1表示出錯
+    }
+
+    // 提示用戶輸入總耗油量並存儲在 'y' 中
+    printf("Input total fuel spent in liters: ");
+    if (scanf("%f", &amp;y) != 1) { // 檢查 scanf 的返回值
+        printf("Error: Please enter a valid float number.\n");
+        return 1; // 返回1表示出錯
+    }
+
+    // 檢查總耗油量是否為0，以避免除以0的情況
+    if (y == 0) {
+        printf("Error: Total fuel spent cannot be zero.\n");
+        return 1; // 返回1表示出錯
+    }
+
+    // 計算並輸出平均油耗
+    printf("Average consumption (km/lt): %.3f\n", x / y);
+
+    return 0; // 返回0表示程式正常結束
+}</pre>
+<p><span><img alt="" height="145" src="/images/cp04.png" width="450"/><br/></span></p>
 <p><span>5.<span>用 C 語言寫一個程序，使用函數求任意數字的平方</span></span></p>
 <p><span><span></span></span></p>
 <p><span><span>6.<span>用 C 語言寫一個程序，使用函數交換兩個數字</span></span></span></p>
