@@ -162,7 +162,24 @@ int main()
 }</pre>
 <p><span><img alt="" height="214" src="./../images/cp21.png" width="450"/><br/></span></p>
 <p><span>2.<span>編寫一個C 程式來取得您正在使用的C 版本</span></span></p>
-<p><span><span></span></span></p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main(int argc, char** argv) {
+    // Check for C standard version
+    #if __STDC_VERSION__ &gt;=  201710L
+        printf("We are using C18!\n");
+    #elif __STDC_VERSION__ &gt;= 201112L
+        printf("We are using C11!\n");
+    #elif __STDC_VERSION__ &gt;= 199901L
+        printf("We are using C99!\n");
+    #else
+        printf("We are using C89/C90!\n");
+    #endif
+
+    // Indicate successful execution
+    return 0;
+}</pre>
+<p><span><span><img alt="" height="112" src="./../images/cp22.png" width="450"/><br/></span></span></p>
 <p><span><span>3.<span>寫一個 C 程序，使用哈希 (#) 列印一個區塊 F，其中 F 的高度為 6 個字符，寬度為 5 個和 4 個字符。</span><span>並且還列印一個非常大的“C”</span></span></span></p>
 <p><span><span><span></span></span></span></p>
 <p><span><span><span>4.<span>寫一個C 程序，反向列印下列字元</span></span></span></span></p>
