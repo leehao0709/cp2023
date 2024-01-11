@@ -419,7 +419,46 @@ int fact(int n) {
 }</pre>
 <p><span><span><span><span><span><img alt="" height="189" src="./../images/cp08.png" width="450"/><br/></span></span></span></span></span></p>
 <p><span><span><span><span><span>9.<span>使用函數將十進制數轉換為二進制數</span></span></span></span></span></span></p>
-<p><span><span><span><span><span><span></span></span></span></span></span></span></p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include&lt;stdio.h&gt;
+
+long toBin(int);
+
+int main()
+{
+    long bno;
+    int dno;
+    int scanfResult; // 儲存 scanf 函式的返回值
+
+    printf("\n\n 函式 : 十進制轉二進制 :\n");
+    printf("-------------------------------------------\n");
+    printf(" 輸入任意十進制數字 : ");
+
+    scanfResult = scanf("%d", &amp;dno); // 儲存 scanf 函式的返回值
+
+    if (scanfResult != 1) {
+        printf("輸入錯誤或無效的數字。\n");
+        return 1; // 適當的錯誤處理
+    }
+
+    bno = toBin(dno);
+    printf("\n 二進制值為 : %ld\n\n", bno);
+
+    return 0;
+}
+
+long toBin(int dno)
+{
+    long bno = 0, remainder, f = 1;
+    while(dno != 0)
+    {
+        remainder = dno % 2;
+        bno = bno + remainder * f;
+        f = f * 10;
+        dno = dno / 2;
+    }
+    return bno;
+}</pre>
+<p><span><span><span><span><span><span><img alt="" height="202" src="./../images/cp09.png" width="450"/><br/></span></span></span></span></span></span></p>
 <p><span><span><span><span><span><span>10.<span>使用函數檢查一個數是否為質數</span></span></span></span></span></span></span></p>
 <p><span><span><span><span><span><span><span></span></span></span></span></span></span></span></p>
 <br />ANSIC << <a href='ANSIC.html'>Previous</a> <a href='課後練習2.html'>Next</a> >> 課後練習2</div>
