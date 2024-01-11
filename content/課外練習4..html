@@ -142,23 +142,55 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">Q.2 << <a href='Q.2.html'>Previous</a> <a href='Q.4.html'>Next</a> >> Q.4<br /><h1>Q.3</h1>
-<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+    <div id="tipue_search_content">課外練習3. << <a href='課外練習3..html'>Previous</a> <a href='課外練習5..html'>Next</a> >> 課外練習5.<br /><h1>課外練習4.</h1>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">/* =========================
+ #define 的範例 2.
+========================= */
+#include &lt;stdio.h&gt;
 
+#define TRUE 1
+#define FALSE 0
+#define BOOL int
+
+/* ====================
+如果傳入值大於 10, 則傳回 TRUE
+==================== */
+BOOL is_greater_than_10(int i)
+{
+    if (i &gt; 10)
+        return TRUE;
+    else
+        return FALSE;
+}
+
+/* ====================
+ main function.
+==================== */
 int main()
 {
-float a = 0.5;
-double b = 1.2;
-int c = 3;
-b = b + a + c;
+    int i;
+    BOOL result;
 
-/* 輸出 a, b, c 到螢幕 */
-printf("a = %3.1f, b = %3.1f, c = %d\n", a, b, c);
+    printf("Input a number: ");
 
-return 0;
-}</pre>
-<p><span><img caption="false" height="252" src="./../images/q3.png" width="450"/><br/></span></p>
-<br />Q.2 << <a href='Q.2.html'>Previous</a> <a href='Q.4.html'>Next</a> >> Q.4</div>
+    // 檢查 scanf 的返回值
+    if (scanf("%d", &amp;i) != 1) {
+        printf("Error reading input.\n");
+        return 1;  // 返回非零值表示錯誤
+    }
+
+    result = is_greater_than_10(i);
+
+    if (result == TRUE)
+        printf("Greater than 10!\n"); /* 大於 10 */
+    else
+        printf("Not greater than 10!\n"); /* 不大於 10 */
+
+    return 0;
+}
+</pre>
+<p><span><img alt="" height="142" src="./../images/cp4.png" width="450"/><br/></span></p>
+<br />課外練習3. << <a href='課外練習3..html'>Previous</a> <a href='課外練習5..html'>Next</a> >> 課外練習5.</div>
         
     <!-- footer -->
       <div class="container">
