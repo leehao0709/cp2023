@@ -1628,7 +1628,40 @@ void swap(int *p, int *q) {
 }</pre>
 <p><span><span><span><img alt="" height="225" src="/images/cp06.png" width="450"/><br/></span></span></span></p>
 <p><span><span><span>7.<span>使用函數檢查給定數字是偶數還是奇數</span></span></span></span></p>
-<p><span><span><span><span></span></span></span></span></p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int checkOddEven(int n1)
+{   
+    return (n1 &amp; 1);
+}
+
+int main()
+{
+    int n1;
+    int scanfResult; // 儲存 scanf 函式的返回值
+
+    printf("\n\n 函式：檢查數字是奇數還是偶數：\n");
+    printf("------------------------------------------------\n");
+
+    printf("輸入任意數字：");
+    scanfResult = scanf("%d", &amp;n1); // 儲存 scanf 函式的返回值
+
+    if (scanfResult != 1) {
+        printf("無效的輸入。\n");
+        return 1; // 適當的錯誤處理
+    }
+
+    if(checkOddEven(n1))
+    {
+        printf("輸入的數字是奇數。\n\n");
+    }
+    else
+    {
+        printf("輸入的數字是偶數。\n\n");
+    }
+    return 0;
+}</pre>
+<p><span><span><span><span><img alt="" height="196" src="/images/cp07.png" width="450"/><br/></span></span></span></span></p>
 <p><span><span><span><span>8.<span>使用函數求 1!/1+2!/2+3!/3+4!/4+5!/5 數列的和</span></span></span></span></span></p>
 <p><span><span><span><span><span></span></span></span></span></span></p>
 <p><span><span><span><span><span>9.<span>使用函數將十進制數轉換為二進制數</span></span></span></span></span></span></p>
