@@ -2,7 +2,7 @@
         <head>
         <title>cmsite</title>
         <meta charset="utf-8">
-<meta property="head" content="H2">
+<meta property="head" content="H3">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
@@ -142,86 +142,40 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">課堂內容 << <a href='課堂內容.html'>Previous</a> <a href='C_ex.html'>Next</a> >> C_ex<br /><h1>EX_2</h1>
-<p><span>1.編寫一個 C 程式來列印您的姓名、出生日期和手機號碼</span></p>
-<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+    <div id="tipue_search_content">課外練習2. << <a href='課外練習2..html'>Previous</a> <a href='課外練習4..html'>Next</a> >> 課外練習4.<br /><h1>課外練習3.</h1>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">/* ====================
+ 2d array.
+==================== */
+#include &lt;stdio.h&gt;
 
-int main()  
+int main()
 {
-    // Print Name
-    printf("Name   : Andy\n"); 
+    int array[3][3];
+    int x, y;
 
-    // Print Date of Birth
-    printf("DOB    : July 30, 2049\n"); 
+    array[0][0] = 1;
+    array[0][1] = 2;
+    array[0][2] = 3;
+    array[1][0] = 4;
+    array[1][1] = 5;
+    array[1][2] = 6;
+    array[2][0] = 7;
+    array[2][1] = 8;
+    array[2][2] = 9;
 
-    // Print Mobile Number
-    printf("Mobile : 07-7777777748\n"); 
+    for (x = 0; x &lt; 3; x++)
+    {
+        for (y = 0; y &lt; 3; y++)
+        {
+            printf("%d,", array[x][y]);
+        }
+    }
 
-    // Indicate successful execution
-    return(0); 
-}</pre>
-<p><span><img alt="" height="214" src="./../images/cp21.png" width="450"/><br/></span></p>
-<p><span>2.<span>編寫一個C 程式來取得您正在使用的C 版本</span></span></p>
-<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
-
-int main(int argc, char** argv) {
-    // Check for C standard version
-    #if __STDC_VERSION__ &gt;=  201710L
-        printf("We are using C18!\n");
-    #elif __STDC_VERSION__ &gt;= 201112L
-        printf("We are using C11!\n");
-    #elif __STDC_VERSION__ &gt;= 199901L
-        printf("We are using C99!\n");
-    #else
-        printf("We are using C89/C90!\n");
-    #endif
-
-    // Indicate successful execution
     return 0;
-}</pre>
-<p><span><span><img alt="" height="112" src="./../images/cp22.png" width="450"/><br/></span></span></p>
-<p><span><span>3.<span>寫一個 C 程序，使用乘法符號 (*) 列印一個區塊 F，其中 F 的高度為 6 個字符，寬度為 5 個和 4 個字符。</span><span>並且還列印一個非常大的“C”</span></span></span></p>
-<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
-
-int main() 
-{
-    // Print top line of pattern
-    printf("    ******\n");
-
-    // Print second line of pattern
-    printf("  **      **\n");
-
-    // Print lines 3 to 7 of pattern
-    printf(" *\n");
-    printf(" *\n");
-    printf(" *\n");
-    printf(" *\n");
-    printf(" *\n");
-
-    // Print bottom line of pattern
-    printf("  **      **\n");
-
-    // Print last line of pattern
-    printf("    ******\n");
-
-    return(0);
-}</pre>
-<p><span><span><span><img alt="" height="434" src="./../images/cp23.png" width="450"/><br/></span></span></span></p>
-<p><span><span><span>4.<span>寫一個C 程序，反向列印下列字元</span></span></span></span></p>
-<p><span><span><span><span></span></span></span></span></p>
-<p><span><span><span><span>5.<span>寫一個 C 程式來計算高 7 英吋、寬 5 英吋的矩形的周長和面積</span></span></span></span></span></p>
-<p><span><span><span><span><span></span></span></span></span></span></p>
-<p><span><span><span><span><span>6.<span>寫一個 C 程式來計算給定半徑的圓的周長和面積</span></span></span></span></span></span></p>
-<p><span><span><span><span><span><span></span></span></span></span></span></span></p>
-<p><span><span><span><span><span><span>7.<span>寫一個C 程式來顯示多個變數</span></span></span></span></span></span></span></p>
-<p><span><span><span><span><span><span><span></span></span></span></span></span></span></span></p>
-<p><span><span><span><span><span><span><span>8.<span>編寫一個 C 程序，將指定的日期轉換為年、週和日</span></span></span></span></span></span></span></span></p>
-<p><span><span><span><span><span><span><span><span></span></span></span></span></span></span></span></span></p>
-<p><span><span><span><span><span><span><span><span>9.<span>寫一個 C 程序，接受使用者提供的兩個整數併計算這兩個整數的和</span></span></span></span></span></span></span></span></span></p>
-<p><span><span><span><span><span><span><span><span><span></span></span></span></span></span></span></span></span></span></p>
-<p><span><span><span><span><span><span><span><span><span>10.<span>寫一個 C 程序，接受使用者提供的兩個整數併計算這兩個整數的乘積</span></span></span></span></span></span></span></span></span></span></p>
-<p><span><span><span><span><span><span><span><span><span><span></span></span></span></span></span></span></span></span></span></span></p>
-<br />課堂內容 << <a href='課堂內容.html'>Previous</a> <a href='C_ex.html'>Next</a> >> C_ex</div>
+}
+</pre>
+<p><span><img alt="" height="123" src="./../images/cp3.png" width="450"/><br/></span></p>
+<br />課外練習2. << <a href='課外練習2..html'>Previous</a> <a href='課外練習4..html'>Next</a> >> 課外練習4.</div>
         
     <!-- footer -->
       <div class="container">
