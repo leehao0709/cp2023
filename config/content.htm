@@ -1984,7 +1984,35 @@ int main() {
 }</pre>
 <p><span><span><span><span><span><span><span><span><span><img alt="" height="165" src="/images/cp29.png" width="450"/><br/></span></span></span></span></span></span></span></span></span></p>
 <p><span><span><span><span><span><span><span><span><span>10.<span>寫一個 C 程序，接受使用者提供的兩個整數併計算這兩個整數的乘積</span></span></span></span></span></span></span></span></span></span></p>
-<p><span><span><span><span><span><span><span><span><span><span></span></span></span></span></span></span></span></span></span></span></p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main() {
+    int x, y;
+    int result_x, result_y; // 用於儲存 scanf 的返回值
+
+    // 獲取第一個整數
+    printf("輸入第一個整數：");
+    result_x = scanf("%d", &amp;x);
+    if (result_x != 1) {
+        printf("錯誤：請輸入整數。\n");
+        return 1;
+    }
+
+    // 獲取第二個整數
+    printf("輸入第二個整數：");
+    result_y = scanf("%d", &amp;y);
+    if (result_y != 1) {
+        printf("錯誤：請輸入整數。\n");
+        return 1;
+    }
+
+    // 計算並輸出它們的乘積
+    printf("這兩個整數的乘積 = %d\n", x * y);
+
+    return 0;
+}
+</pre>
+<p><span><span><span><span><span><span><span><span><span><span><img alt="" height="145" src="/images/cp30.png" width="450"/><br/></span></span></span></span></span></span></span></span></span></span></p>
 <h1>C_ex</h1>
 <h2>Class 1</h2>
 <h3><span style="color: #ff9900;">Q.1</span></h3>
