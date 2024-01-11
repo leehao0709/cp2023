@@ -208,7 +208,23 @@ int main()
 }</pre>
 <p><span><span><span><img alt="" height="434" src="./../images/cp23.png" width="450"/><br/></span></span></span></p>
 <p><span><span><span>4.<span>寫一個C 程序，反向列印下列字元</span></span></span></span></p>
-<p><span><span><span><span></span></span></span></span></p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main() 
+{
+    // Declare and initialize character variables
+    char char1 = 'C';
+    char char2 = 'U';
+    char char3 = 'T';
+
+    // Print the original and reversed characters
+    printf("The reverse of %c%c%c is %c%c%c\n",
+        char1, char2, char3,
+        char3, char2, char1);
+
+    return(0);
+}</pre>
+<p><span><span><span><span><img alt="" height="198" src="./../images/cp24.png" width="450"/><br/></span></span></span></span></p>
 <p><span><span><span><span>5.<span>寫一個 C 程式來計算高 7 英吋、寬 5 英吋的矩形的周長和面積</span></span></span></span></span></p>
 <p><span><span><span><span><span></span></span></span></span></span></p>
 <p><span><span><span><span><span>6.<span>寫一個 C 程式來計算給定半徑的圓的周長和面積</span></span></span></span></span></span></p>
